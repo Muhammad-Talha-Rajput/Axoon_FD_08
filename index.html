@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            volkhov: ['Volkhov', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-Volkhov">
+  <!-- first container -->
+  <!-- nav box -->
+  <nav
+    class="w-[100%] h-24 flex items-center justify-around Position: fixed top-0 bg-white shadow-none [box-shadow:0_4px_6px_-1px_rgba(0,0,0,0.1)] z-20">
+    <!-- logo -->
+    <div class="text-black text-5xl">
+      <a href="#">Fasco</a>
+    </div>
+    <ul class="hidden w-[60%] md:flex items-center justify-between space-x-4 ml-8 text-black">
+      <li><a href="#">Home</a></li>
+      <li><a href="#deals">Deals</a></li>
+      <li><a href="#new-arrivals">New&nbsp;Arrivals</a></li>
+      <li><a href="#pakages">Pakages</a></li>
+      <li><a href="#">Sign&nbsp;In</a></li>
+      <li><button class="text-white bg-black px-10 py-3 shadow-md rounded ">Sign&nbsp;Up</button></li>
+    </ul>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-3xl focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-0 w-64 bg-white shadow-lg p-4 space-y-4">
+      <a href="#" class="block hover:text-gray-600">Home</a>
+      <a href="#deals" class="block hover:text-gray-600">Deals</a>
+      <a href="#" class="block hover:text-gray-600">New Arrivals</a>
+      <a href="#pakages" class="block hover:text-gray-600">Packages</a>
+      <a href="#" class="block hover:text-gray-600">Sign In</a>
+      <button class="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800">Sign Up</button>
+    </div>
+  </nav>
+  <div class="w-full h-screen flex flex-col items-center pt-24">
+
+    <!-- main content -->
+    <section id="home" class="w-full h-full flex flex-col items-center justify-center space-y-8">
+      <div class="w-[90%] h-[80%] flex items-center justify-between">
+        <!-- left side -->
+        <div class="w-[30%] h-full bg-gray-200 rounded-lg over flow-hidden relative flex items-end justify-center">
+          <!-- image -->
+          <img src="assets/p1 left img.png" alt="left img" class="w-full h-[100%] object-cover rounded-lg shadow-lg">
+        </div>
+        <!-- middle side -->
+        <div class="w-[30%] h-full rounded-lg flex flex-col items-center  space-y-4">
+          <img src="assets/p1 middle img1.png" alt=""
+            class="w-full h-[20%] object-contain rounded-lg shadow-lg bg-gray-200">
+          <!-- mid -->
+          <div class="w-full h-[55%] flex flex-col items-center justify-between">
+            <h1 class="text-6xl text-black">ULTIMATE</h1>
+            <h1 class="text-8xl text-white font-bold  [text-shadow:0_0_0_#000] [-webkit-text-stroke:1px_gray]">
+              SALE</h1>
+            <p>NEW&nbsp;COLLECTION</p>
+            <button class="px-4 py-2 bg-black rounded-md text-white">SHOP&nbsp;NOW</button>
+          </div>
+          <img src="assets/p1 middle img2-min.jpg" alt=""
+            class="w-full h-[20%] object-cover object-[center_30%] rounded-lg shadow-lg bg-red-200">
+        </div>
+        <!-- right side -->
+        <div class="w-[30%] h-full bg-gray-200 rounded-lg over flow-hidden relative flex items-end justify-center">
+          <img src="assets/p1 right img.png" alt="left img" class="w-full h-[100%] object-cover rounded-lg shadow-lg">
+        </div>
+      </div>
+      <!-- animate moved banner  -->
+      <div class="w-full h-24 flex items-center justify-evenly bg-white shadow-lg overflow-hidden whitespace-nowrap">
+        <div
+          class="inline-block animate-[scroll-left_10s_linear_infinite] flex items-center justify-around w-full h-full">
+          <img src="assets/animate banner img1.png" alt="" class="h-8 w-24 object-contain inline-block">
+          <img src="assets/animate banner img2.png" alt="" class="h-8 w-24 object-contain inline-block">
+          <img src="assets/animate banner img3.png" alt="" class="h-8 w-24 object-contain inline-block">
+          <img src="assets/animate banner img4.png" alt="" class="h-8 w-24 object-cover inline-block">
+          <img src="assets/animate banner img5.png" alt="" class="h-8 w-24 object-cover inline-block">
+        </div>
+      </div>
+    </section>
+    <!-- deals  -->
+
+    <section id="deals" class="w-[90%] px-8 py-16 flex flex-col lg:flex-row justify-between items-center gap-12">
+      <!-- Left Content -->
+      <div class="md:w-[40%] w-full">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Deals Of The Month</h2>
+        <p class="text-gray-500 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+          aliquam sem.
+        </p>
+        <button class="bg-black text-white px-6 py-2 rounded hover:bg-gray-900 transition mb-8">Buy Now</button>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Hurry, Before It’s Too Late!</h3>
+          <div class="flex gap-4">
+            <!-- Timer Box -->
+            <div class="text-center">
+              <div class="bg-white border shadow-md px-4 py-2 rounded text-xl font-bold">02</div>
+              <p class="text-xs mt-1 text-gray-500">Days</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-white border shadow-md px-4 py-2 rounded text-xl font-bold">06</div>
+              <p class="text-xs mt-1 text-gray-500">Hr</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-white border shadow-md px-4 py-2 rounded text-xl font-bold">05</div>
+              <p class="text-xs mt-1 text-gray-500">Mins</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-white border shadow-md px-4 py-2 rounded text-xl font-bold">30</div>
+              <p class="text-xs mt-1 text-gray-500">Sec</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content: Product Cards -->
+      <div class="flex-1 flex gap-4 overflow-hidden">
+        <!-- Card 1 -->
+        <div class="relative max-w-[200px] h-[300px]">
+          <img src="assets/p2 img 1-min.jpg" alt="Model" class="rounded-lg object-cover h-full w-full">
+          <div class="absolute bottom-4 left-4 bg-white px-4 py-2 rounded shadow text-sm">
+            <p class="text-gray-500 text-xs">01 — Spring Sale</p>
+            <p class="text-black font-bold text-lg">30% OFF</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="max-w-[200px] h-[200px]">
+          <img src="assets/p2 img 2.jpg" alt="Model" class="rounded-lg object-cover h-full w-full">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="max-w-[200px] h-[200px]">
+          <img src="assets/p2 img 3.jpg" alt="Model" class="rounded-lg object-cover h-full w-full">
+        </div>
+      </div>
+    </section>
+
+    <!-- New arrivals -->
+    <section id="new-arrivals" class="py-16 px-6 md:px-20">
+
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">New Arrivals</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam.
+        </p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-center gap-3 flex-wrap mb-10">
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">Men's Fashion</button>
+        <button class="px-4 py-2 bg-black text-white rounded-lg text-sm">Women's Fashion</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">Women Accessories</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">Men Accessories</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">Discount Deals</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Product Card -->
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img1.jpg" class="rounded-lg mb-4" alt="Shiny Dress">
+          <h3 class="font-semibold">Shiny Dress</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img2-min.jpg" class="rounded-lg mb-4" alt="Long Dress">
+          <h3 class="font-semibold">Long Dress</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img3-min.jpg" class="rounded-lg mb-4" alt="Full Sweater">
+          <h3 class="font-semibold">Full Sweater</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img4-min.jpg" class="rounded-lg mb-4" alt="White Dress">
+          <h3 class="font-semibold">White Dress</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img6-min.jpg" class="rounded-lg mb-4" alt="Colorful Dress">
+          <h3 class="font-semibold">Colorful Dress</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/p3 img5.jpg" class="rounded-lg mb-4" alt="White Shirt">
+          <h3 class="font-semibold">White Shirt</h3>
+          <p class="text-sm text-gray-500 mb-2">AliExpress</p>
+          <p class="text-xs text-gray-400 mb-1">[64] Customer Reviews</p>
+          <div class="flex items-center gap-1 text-yellow-400 mb-1">★★★★★</div>
+          <p class="font-bold text-lg">$95.50</p>
+          <p class="text-sm text-red-500 mt-1">Almost Sold Out</p>
+        </div>
+      </div>
+
+      <!-- View More Button -->
+      <div class="flex justify-center mt-10">
+        <button class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">View More</button>
+      </div>
+    </section>
+
+    <!-- piky belinders section -->
+    <section id="pakages" class="flex flex-col lg:flex-row w-full h-fit">
+
+      <!-- Left Image Panel -->
+      <div class="relative w-full lg:w-1/2 bg-white flex justify-center items-center p-6">
+        <img src="assets/p4 img1.png" alt="Peaky Model" class="max-h-[500px] object-contain" />
+
+        <!-- Labels -->
+        <span class="absolute top-20 left-4 bg-white text-xs px-2 py-1 border rounded shadow">Suspender</span>
+        <span class="absolute top-40 left-2 bg-white text-xs px-2 py-1 border rounded shadow">Hugo Boss</span>
+        <span class="absolute top-8 right-6 bg-white text-xs px-2 py-1 border rounded shadow">Flat Cap</span>
+        <span class="absolute top-32 right-4 bg-white text-xs px-2 py-1 border rounded shadow">Hugo Boss</span>
+        <span class="absolute bottom-12 right-6 bg-white text-xs px-2 py-1 border rounded shadow">Santoni</span>
+      </div>
+
+      <!-- Right Content Panel with Diagonal Cut on large screens -->
+      <div class="relative w-full lg:w-3/4 bg-gray-300 p-6 lg:p-10 flex items-center justify-center lg:justify-end 
+    lg:[clip-path:polygon(180px_0,100%_0,100%_100%,0_100%)] ">
+
+        <!-- Diagonal Line (Visible only on large screens) -->
+        <div
+          class="hidden lg:block absolute top-0 left-[180px] w-[2px] h-full bg-black rotate-[19.7deg] origin-top-right scale-125">
+        </div>
+
+        <!-- Content -->
+        <div class="w-full lg:w-3/4 max-w-xl flex flex-col justify-center">
+          <p class="text-sm text-gray-500 uppercase mb-2">Women Collection</p>
+          <h2 class="text-3xl font-bold text-gray-700 mb-4">Peaky Blinders</h2>
+
+          <h3 class="text-sm font-semibold mb-1 underline">Description</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis.
+          </p>
+
+          <div class="mb-4 flex items-center gap-3">
+            <p class="text-sm font-medium">Size:</p>
+            <button class="px-3 py-1 border rounded text-sm bg-black text-white">M</button>
+          </div>
+
+          <p class="text-2xl font-bold mb-4">$100.00</p>
+          <button class="bg-black text-white px-6 py-2 rounded shadow hover:bg-gray-900 w-fit">Buy Now</button>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Features Row -->
+    <section class="bg-white py-10 px-6 border-t relative">
+      <div class="w-[100%] mx-auto flex flex-wrap justify-around text-center">
+
+        <div class="flex items-center w-1/4">
+          <div class="text-2xl mb-2">⭐</div>
+          <div>
+            <p class="font-semibold">High Quality</p>
+            <p class="text-sm text-gray-500">crafted from top materials</p>
+          </div>
+        </div>
+
+        <div class="flex items-center w-1/4">
+          <div class="text-2xl mb-2">🛡️</div>
+          <div>
+            <p class="font-semibold">Warranty Protection</p>
+            <p class="text-sm text-gray-500">Over 2 years</p>
+          </div>
+        </div>
+
+        <div class="flex items-center w-1/4">
+          <div class="text-2xl mb-2">📦</div>
+          <div>
+            <p class="font-semibold">Free Shipping</p>
+            <p class="text-sm text-gray-500">Order over 150 $</p>
+          </div>
+        </div>
+
+        <div class="flex items-center w-1/4">
+          <div class="text-2xl mb-2">📞</div>
+          <div>
+            <p class="font-semibold">24 / 7 Support</p>
+            <p class="text-sm text-gray-500">Dedicated support</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Instagram Follow Section -->
+    <section class="py-16 px-6 text-center relative">
+
+      <!-- Section Title -->
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Follow Us On Instagram</h2>
+      <p class="text-gray-500 max-w-xl mx-auto mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+      </p>
+
+      <!-- Image Grid -->
+      <div class="flex flex-wrap justify-center items-center gap-4 max-w-7xl mx-auto px-4">
+        <!-- Replace these image URLs with real Instagram-style photos -->
+        <img src="assets/p5 img1.jpg" alt="1" class="h-[230px] w-[180px] object-cover rounded-lg shadow" />
+        <img src="assets/p5 img2-min.jpg" alt="2" class="h-[300px] w-[180px] object-cover rounded-lg shadow" />
+        <img src="assets/p5 img3-min.jpg" alt="3" class="h-[230px] w-[180px] object-cover rounded-lg shadow" />
+        <img src="assets/p5 img4-min.jpg" alt="4" class="h-[300px] w-[180px] object-cover rounded-lg shadow" />
+        <img src="assets/p5 img5-min.jpg" alt="5" class="h-[230px] w-[180px] object-cover rounded-lg shadow" />
+        <img src="assets/p5 img1.jpg" alt="6" class="h-[300px] w-[180px] object-cover rounded-lg shadow" />
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="py-20 px-4 w-full min-h-screen flex flex-col items-center justify-between bg-gray-50 md:flex-col">
+
+      <!-- Section Heading -->
+      <div class="text-center w-full mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-2">This Is What Our Customers Say</h2>
+        <p class="text-gray-500 text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+        </p>
+      </div>
+
+      <!-- Testimonial Cards Wrapper -->
+      <div class="relative flex flex justify-center items-center w-3/4">
+
+        <!-- Left Testimonial (behind) -->
+        <div
+          class="absolute left-0 flex items-center justify-around transform -translate-x-[10%] max-w-[40%] minw-[300px] min-h-[220px] bg-white shadow-md opacity-80 md:flex">
+          <img src="assets/p6 img1-min.png" alt="Main User"
+            class="w-1/4 h-32 object-contain [box-shadow:-8px_8px_0px_rgba(0,0,0,0.2)]" />
+          <div class="flex flex-col items-start justify-around h-[95%] w-1/2">
+            <p class="text-gray-700 text-sm max-w-md mx-auto">
+              "You won't regret it. I would like to personally thank you for your outstanding product. Absolutely
+              wonderful!"
+            </p>
+            <div class="text-orange-400">★★★★★</div>
+            <span class="w-[100%] h-[1px] bg-black"></span>
+            <h3 class="font-semibold">James K.</h3>
+            <p class="text-sm text-gray-500">Traveler</p>
+          </div>
+        </div>
+
+        <!-- Center Testimonial (main) -->
+        <div
+          class="max-w-[60%] min-w-[360px] min-h-[250px] flex items-center justify-between bg-white shadow-xl p-8 z-10">
+          <img src="assets/p6 img2-min.png" alt="Main User"
+            class="w-1/4 h-32 mx-auto object-contain [box-shadow:-8px_8px_0px_rgba(0,0,0,0.2)]" />
+          <div class="flex flex-col items-start w-1/2">
+            <p class="text-gray-700 text-sm mb-4 max-w-md mx-auto">
+              "You won't regret it. I would like to personally thank you for your outstanding product. Absolutely
+              wonderful!"
+            </p>
+            <div class="text-orange-400 mb-2">★★★★★</div>
+            <h3 class="font-semibold">James K.</h3>
+            <p class="text-sm text-gray-500">Traveler</p>
+          </div>
+        </div>
+
+        <!-- Right Testimonial (behind) -->
+        <div
+          class="absolute right-0 flex items-center justify-around transform translate-x-[10%] max-w-[40%] min-w-[300px] min-h-[220px] bg-white shadow-md opacity-80 ">
+          <img src="assets/p6 img1-min.png" alt="Main User"
+            class="w-1/4 h-32 object-contain [box-shadow:-8px_8px_0px_rgba(0,0,0,0.2)]" />
+          <div class="flex flex-col items-start justify-around h-[95%] w-1/2">
+            <p class="text-gray-700 text-sm max-w-md mx-auto">
+              "You won't regret it. I would like to personally thank you for your outstanding product. Absolutely
+              wonderful!"
+            </p>
+            <div class="text-orange-400">★★★★★</div>
+            <span class="w-[100%] h-[1px] bg-black"></span>
+            <h3 class="font-semibold">James K.</h3>
+            <p class="text-sm text-gray-500">Traveler</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <div class="flex justify-center gap-4 mt-8">
+        <button class="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-gray-200 transition">
+          &larr;
+        </button>
+        <button class="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-gray-200 transition">
+          &rarr;
+        </button>
+      </div>
+
+    </section>
+
+    <section class="w-[90%] relative min-h-screen flex flex-col justify-center items-center px-6 py-16">
+      <div class="absolute -left-[300px] bottom-0 md:top-0 md:bottom-auto md:h-full flex items-start md:items-center">
+        <img src="assets/p7 img1-min.png" alt="Man" class="h-[600px] object-contain" />
+      </div>
+      <div class="absolute right-0 bottom-0 md:top-0 md:bottom-auto md:h-full flex items-end md:items-center">
+        <img src="assets/p7 img2-min.png" alt="Woman" class="h-[600px] object-contain" />
+      </div>
+
+      <!-- Centered Content -->
+      <div class="z-10 text-center max-w-xl">
+        <h1 class="text-3xl md:text-4xl font-semibold mb-4">Subscribe To Our Newsletter</h1>
+        <p class="text-gray-500 text-sm mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+          Scelerisque duis ultrices sollicitudin
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <input type="email" placeholder="michael@ymail.com"
+            class="w-full sm:w-96 px-4 py-3 border border-gray-200 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300" />
+          <button class="px-6 py-3 bg-black text-white rounded-md shadow-md hover:bg-gray-900 transition">
+            Subscribe Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-[90%] bg-white border-t border-gray-100 text-gray-700 text-sm py-6 px-6 md:px-16">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="font-bold text-lg">FASCO</div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="hover:underline">Support Center</a>
+          <a href="#" class="hover:underline">Invoicing</a>
+          <a href="#" class="hover:underline">Contract</a>
+          <a href="#" class="hover:underline">Careers</a>
+          <a href="#" class="hover:underline">Blog</a>
+          <a href="#" class="hover:underline">FAQs</a>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 text-xs mt-4">
+        Copyright © 2022 Xpro. All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
